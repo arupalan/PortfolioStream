@@ -81,3 +81,9 @@ Infact I mostly work on mac and I do not have Visual Studio on my windows server
 ## Test and Coverage
 * You can execute with switch -console to see the logs on console
  ![Console Mode](http://www.alanaamy.net/wp-content/uploads/2016/07/Tests.png)
+
+## Outout 3.txt
+*  ![Console Mode](http://www.alanaamy.net/wp-content/uploads/2016/07/3.txt)
+
+## Outout 4.txt
+*  ![Console Mode](http://www.alanaamy.net/wp-content/uploads/2016/07/4.txt)
