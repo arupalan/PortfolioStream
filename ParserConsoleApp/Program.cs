@@ -32,12 +32,6 @@ namespace ParserConsoleApp
             }
 
 
-            Console.ReadLine();
-
-
-
-
-
         }
 
         public static async Task OrderByTenorThenByPortfolio()
