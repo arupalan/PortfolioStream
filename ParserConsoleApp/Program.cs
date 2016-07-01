@@ -11,54 +11,27 @@ namespace ParserConsoleApp
     {
         public static void Main()
         {
-            //try
-            //{
-            //    Task.WaitAll(
-            //        Task.Factory.StartNew( () => { OrderByTenorThenByPortfolio(); }), 
-            //        Task.Factory.StartNew( () => { OrderByPortfolioThenByTenor(); })
-            //        );
-
-            //    Console.WriteLine("Please check files 3.txt and 4.txt have been generated");
-
-            //}
-            //catch (AggregateException e)
-            //{
-            //    foreach (Exception t in e.InnerExceptions)
-            //    {
-            //        Console.WriteLine("\n-------------------------------------------------\n{0}", 
-            //            t.ToString());
-            //    }
-            //    ;
-            //}
-
-            Task innerTask1 = Task.Factory.StartNew(async () => { await OrderByTenorThenByPortfolio(); });
-            Task innerTask2 = Task.Factory.StartNew(async () => { await OrderByPortfolioThenByTenor(); });
-
-            var task = Task.Factory.ContinueWhenAll(
-                new[] { innerTask1, innerTask2 },
-                innerTasks =>
-                {
-                    Task.WaitAll(innerTasks);
-
-                    foreach (var innerTask in innerTasks)
-                    {
-                        Console.WriteLine("Result: {0}", innerTask.Status);
-                    }
-                });
-            var exceptionTask = task.ContinueWith(
-                t => Console.Error.WriteLine("Outer Task exception: {0}", t.Exception),
-                TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously);
-
             try
             {
-                task.Wait();
+                Task.WaitAll(
+                    Task.Factory.StartNew(() => { OrderByTenorThenByPortfolio(); }),
+                    Task.Factory.StartNew(() => { OrderByPortfolioThenByTenor(); })
+                    );
+
+                Console.WriteLine("Please check files 3.txt and 4.txt have been generated");
+
             }
-            catch (Exception e)
+            catch (AggregateException e)
             {
-                Console.WriteLine(e);
+                foreach (Exception t in e.InnerExceptions)
+                {
+                    Console.WriteLine("\n-------------------------------------------------\n{0}",
+                        t.ToString());
+                }
+                ;
             }
 
-            Console.WriteLine("Done - Outer Task Status: {0}, Exception Task: {1}", task.Status, exceptionTask.Status);
+
             Console.ReadLine();
 
 
