@@ -6,8 +6,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioStream", "Portfoli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPortfolioStream", "TestPortfolioStream\TestPortfolioStream.csproj", "{739B542B-9F09-497A-BE2C-45EEF23F9A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserConsoleApp", "ParserConsoleApp\ParserConsoleApp.csproj", "{78CE537F-D69D-42C7-B09D-A34BC9B9FE5B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,10 +20,6 @@ Global
 		{739B542B-9F09-497A-BE2C-45EEF23F9A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{739B542B-9F09-497A-BE2C-45EEF23F9A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{739B542B-9F09-497A-BE2C-45EEF23F9A21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78CE537F-D69D-42C7-B09D-A34BC9B9FE5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78CE537F-D69D-42C7-B09D-A34BC9B9FE5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78CE537F-D69D-42C7-B09D-A34BC9B9FE5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78CE537F-D69D-42C7-B09D-A34BC9B9FE5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
